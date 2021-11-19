@@ -2,4 +2,3 @@ index=161975-np (sourcetype=hardware OR sourcetype=device_details)
 | fields deviceId, deviceSysname, serialNumber, serialNumberStatus, deviceName, collector, productId, physicalType, physicalElementId 
 | stats latest(*) as * by physicalElementId 
 | stats values(deviceName) as "Device IP" values(deviceSysname) as "Device Name" values(collector) as "CSPC" values(productId) as "Product Type" values(physicalType) as "Type" values(physicalElementId) as "Physical ID" values(deviceId) as "Device ID" by serialNumber
-this is a test
